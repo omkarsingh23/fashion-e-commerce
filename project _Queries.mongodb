@@ -1,0 +1,238 @@
+1.customer
+
+db.customers.insertMany([
+{
+_id: 1,
+customer_id: 1,
+customer_pass:'xyz1',
+customer_fname:'Olivia',
+customer_lname:'Saha',
+customer_gender:'F',
+customer_address:'New Delhi',
+customer_city:'New Delhi',
+customer_type:'premium',
+customer_contactno:8766254590,
+customer_email:'oliviasaha0110@gmail.com'
+},
+{
+_id: 2,
+customer_id: 2,
+customer_pass:'y2z3',
+customer_fname:'Jay',
+customer_lname:'Singh Rathore',
+customer_gender:'M',
+customer_address:'Mumbai',
+customer_city:'Mumbai',
+customer_type:'premium',
+customer_contactno:8769438006,
+customer_email:'rathorejaysingh006@gmail.com'
+},
+{
+_id: 3,
+customer_id: 3,
+customer_pass:'zxz1',
+customer_fname:'Omkar',
+customer_lname:'Singh',
+customer_gender:'M',
+customer_address:'Maharashtra',
+customer_city:'Maharashtra',
+customer_type:'Premium',
+customer_contactno:7397873931,
+customer_email:'210306105077@paruluniversity.ac.in'
+}
+]);
+
+ 
+
+2.Cart 
+
+db.cart.insertMany([
+{
+_id: 1,
+cart_id:1,
+cart_item_qty: 3,
+product_id: 3,
+customer_id: 1
+},
+{
+_id: 2,
+cart_id:2,
+cart_item_qty: 1,
+product_id: 1,
+customer_id: 2
+},
+{
+_id: 3,
+cart_id:3,
+cart_item_qty: 5,
+product_id: 2,
+customer_id: 3
+}
+,
+{
+_id: 4,
+cart_id:4,
+cart_item_qty: 1,
+product_id: 5,
+customer_id: 5
+}
+,
+{
+_id: 5,
+cart_id:5,
+cart_item_qty: 4,
+product_id: 7,
+customer_id: 4
+}
+]);
+
+ 
+
+3.Category
+
+db.categories.insertMany([
+{
+_id:1,
+category_id:1,
+category_name: 'Women',
+sub_categories: ['Ethnic']
+},
+{
+_id:2,
+category_id:2,
+category_name: 'Men',
+sub_categories: ['Jeans', 'shirts', 't-shirts']
+},
+{
+_id:3,
+category_id:3,
+category_name: 'Sports-wear',
+sub_categories: ['tracksuits', 'Active-tshirts', 'joggers','sneakers']
+},
+{
+_id:4,
+category_id:4,
+category_name: 'Kids',
+sub_categories: ['western']
+}
+]);
+
+
+4.Product 
+
+db.products.insertMany([
+{
+_id:1,
+product_id:1,
+product_name:'white-western-dress',
+product_brand:'Quiero',
+product_segments: ['white', 'midi'],
+product_cost: 2525,
+categories_name: 'Women'
+},
+{
+_id:2,
+product_id:2,
+product_name: 'Casual shirt',
+product_brand: 'Roadster',
+product_segments: ['checked', 'casual'],
+product_cost:1299,
+categories_name: 'Men'
+},
+{
+_id:3,
+product_id:3,
+product_name: 'Casual shirt',
+product_brand: 'highlander',
+product_segments: ['green', 'casual'],
+product_cost: 999,
+categroy_name: 'Men'
+},
+{
+_id:4,
+product_id:4,
+product_name: 'Cotton dress',
+product_brand: 'H&M',
+product_segments: ['Mickey-mouse', 'midlength'],
+product_cost:799,
+categroy_name: 'Kids'
+},
+{
+_id:5,
+product_id:5,
+product_name: 'T-Shirt',
+product_brand: 'Puma',
+product_segments: ['grey','half-sleeves'],
+product_cost: 1999,
+categroy_name: 'sports-wear'
+},
+]);
+
+ 
+
+5.Orders
+
+db.orders.insertMany([
+{
+_id: 1,
+product_id:5,
+product_name: 'PERFORMANCE HEATHER T-Shirt',
+customer_id: 3,
+order_qty: 2,
+order_status: 'Delivered',
+order_date: new Date('2024-01-10')
+},
+{
+_id: 2,
+product_id:4,
+product_name: 'Mast & Harbour shirt',
+customer_id: 1,
+order_qty: 1,
+order_status: 'Dispatched',
+order_date: new Date('2024-02-14')
+},
+{
+_id: 3,
+product_id:3,
+product_name: 'Women Mauve Sheath Midi Dress',
+customer_id: 4,
+order_qty: 1,
+order_status: 'Delivered',
+order_date: new Date('2024-02-10')
+},
+{
+_id: 4,
+product_id:2,
+product_name: 'Orange Bodycon Midi Dress',
+customer_id: 2,
+order_qty: 1,
+order_status: 'cancelled',
+order_date: new Date('2024-01-27')
+}
+]);
+ 
+
+6.Catlog
+
+db.catlog.insertMany([
+{
+seller_name: 'puma',
+product_name: 'PERFORMANCE HEATHER T-Shirt',
+product_qty: 100,
+},
+{
+seller_name: 'Mast & Harbour',
+product_name: 'Mast & Harbour shirt',
+product_qty: 2555,
+},
+{
+seller_name: 'sassafras',
+product_name: 'Women Mauve Sheath Midi Dress',
+product_qty: 450,
+},
+{
+seller_name: 'Disrupt',
+product_name: 'Orange Bodycon Midi Dress',
+product_qty: 1000,
+}
+]);
